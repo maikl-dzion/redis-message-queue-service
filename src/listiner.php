@@ -6,12 +6,14 @@ use Dzion\MessageQueue\MessageQueueService;
 
 $redis = new MessageQueueService();
 
+echo 'Ok';
+
 while (true){
     $tweetCount = $redis->getCountMessages();
-    if (!$tweetCount) {
-        sleep(1);
-    } else {
-        $command = "php consumer.php";
+    if ($tweetCount) {
+        $path = __DIR__ . '/';
+        $command = "php {$path}consumer.php > /dev/null 2>&1 &";
         system($command, $retval);
     }
+    sleep(1);
 }

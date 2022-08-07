@@ -16,7 +16,7 @@ $username   = $message->username;
 $content    = $message->content;
 
 $query = "INSERT INTO  `tweets`
-                (`category_id`, `username`, `content`)
-                VALUES ({$categoryId}, '{$username}','{$content}')";
+           (`category_id`, `username`, `content`)
+           VALUES ({$categoryId}, '{$username}','{$content}')";
 
 $pdo->make($query);
