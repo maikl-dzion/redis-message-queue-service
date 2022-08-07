@@ -1,0 +1,15 @@
+{
+    "name": "dzion/message-queue",
+    "autoload": {
+        "psr-4": {
+            "Dzion\\MessageQueue\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abasov Maikl",
+            "email": "dzion67@mail.ru"
+        }
+    ],
+    "require": {}
+}
